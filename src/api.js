@@ -6,13 +6,13 @@ const app= express();
 const router = express.Router();
 
 
-app.get('/', (req, res)=>{
+router.get('/', (req, res)=>{
     res.status(200).json({
         'hi': "hellow"
     });
 })
 
-app.get('/text', (req, res)=>{
+router.get('/text', (req, res)=>{
     res.status(200).json({
         'text': "hellow"
     });
