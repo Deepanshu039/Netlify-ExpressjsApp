@@ -3,7 +3,7 @@ const serverless= require('serverless-http');
 
 const app= express();
 
-// const router = express.Router();
+const router = express.Router();
 
 
 app.get('/', (req, res)=>{
@@ -17,7 +17,7 @@ app.get('/text', (req, res)=>{
         'text': "hellow"
     });
 })
-// app.use('/.netlify/functions/api' ,router);
+app.use('/netlify/functions/api' ,router);
 
 module.exports.handler = serverless(app);
 
