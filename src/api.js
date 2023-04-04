@@ -17,7 +17,7 @@ router.get('/text', (req, res)=>{
         'text': "hellow"
     });
 })
-app.use('/netlify/functions/api' ,router);
+app.use('/.netlify/functions/api' ,router);
 
 module.exports.handler = serverless(app);
 
